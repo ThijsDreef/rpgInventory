@@ -1,0 +1,101 @@
+consumable
+potion
+150
+[10, 0, 0, 0, 0]
+0
+potion.png
+
+equipable
+equipable gust
+350
+[4, 2, 1, 2, 0]
+4
+noIcon.png
+
+consumable
+rage potion
+150
+[0, 5, 0, 0, 0]
+4
+potion.png
+
+equipable
+buckler
+500
+[2, 0, 0, 0, 0]
+5
+buckler.png
+
+equipable
+sword
+500
+[-1, 2, 0, 0, 0]
+4
+sword.png
+
+equipable
+crown
+500
+[2, 0, 0, 0, 0]
+0
+crown.png
+
+equipable
+leather armor
+500
+[2, 0, 0, 0, 0]
+1
+leather_armor.png
+
+equipable
+leather pants
+500
+[2, 0, 0, 0, 0]
+2
+leather_pants.png
+
+equipable
+leather boots
+500
+[2, 0, 0, 0, 0]
+2
+leather_boots.png
+
+base
+sparkly beads
+10
+
+consumable
+potion
+50
+[2, 0, 0, 0, 0]
+0
+potion.png
+
+equipable
+mage's hand
+100
+[0, -2, 4, 0, 0]
+4
+bulb.png
+
+consumable
+potion of iron skin
+1000
+[20, -5, 20, -5, -5]
+5
+bulb.png
+
+equipable
+a sword
+9896
+[0, 10, -5, 0, 0]
+5
+bulb.png
+
+equipable
+miserable volken
+5000
+[-2, -2, -2, -2, -2]
+3
+bulb.png

@@ -89,11 +89,17 @@ public class Renderer {
     }
   }
 
-  public void drawLargeString(String text, int color, int offx, int offy, ShadowType shadowType) {
+  public int drawLargeString(String text, int color, int offx, int offy, ShadowType shadowType) {
     text = text.toUpperCase();
     int offset = 0;
     for (int i = 0; i < text.length(); i++) {
       int unicode = text.codePointAt(i) - 31;
+      if (unicode == -21)
+      {
+        offset = 0;
+        offy += 12;
+        continue;
+      }
       for (int x = 0; x < largeFont.widths[unicode]; x++) {
         for (int y = 0; y < largeFont.standard.height; y++) {
           if (largeFont.standard.pixels[(x + largeFont.offsets[unicode]) + y * largeFont.standard.width] == 0xffffffff)
@@ -102,6 +108,7 @@ public class Renderer {
       }
       offset += largeFont.widths[unicode];
     }
+    return offset;
   }
 
   public void drawImage(Image image, int offx, int offy)
@@ -116,6 +123,61 @@ public class Renderer {
 
       {
         setPixels(x + offx, y + offy, image.pixels[x + y * image.width], shadowMap[x + y * width]);
+      }
+    }
+  }
+
+  public void drawNonFilledRect(int offx, int offy, int width, int height, int color, ShadowType shadow)
+  {
+    for (int x = 0; x < width + 1; x++)
+    {
+      setPixels(x + offx, offy, color, shadow);
+      setPixels(x + offx, offy + height, color, shadow);
+    }
+    for (int y = 0; y < height; y++)
+    {
+      setPixels(offx, offy + y, color, shadow);
+      setPixels(offx + width, offy + y, color, shadow);
+    }
+  }
+
+  public void drawLine (int x0, int y0, int x1, int y1, int color)
+  {
+    int d = 0;
+
+    int dy = Math.abs(y1 - y0);
+    int dx = Math.abs(x1 - x0);
+
+    int dy2 = (dy << 1); // slope scaling factors to avoid floating
+    int dx2 = (dx << 1); // point
+
+    int ix = x0 < x1 ? 1 : -1; // increment direction
+    int iy = y0 < y1 ? 1 : -1;
+
+    if (dy <= dx) {
+      for (;;) {
+        setPixels(x0, y0, color, ShadowType.HALF);
+        if (x0 == x1)
+          break;
+        x0 += ix;
+        d += dy2;
+        if (d > dx) {
+          y0 += iy;
+          d -= dx2;
+        }
+      }
+    } else {
+      for (;;) {
+        setPixels(x0, y0, color, ShadowType.HALF);
+
+        if (y0 == y1)
+          break;
+        y0 += iy;
+        d += dx2;
+        if (d > dy) {
+          x0 += ix;
+          d -= dy2;
+        }
       }
     }
   }

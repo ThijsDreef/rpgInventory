@@ -27,8 +27,8 @@ public class Game extends AbstractGame
   public  static void main(String[] args)
   {
     Engine en = new Engine((new Game()));
-    en.setWidth(1280);
-    en.setHeight(720);
+    en.setWidth(500);
+    en.setHeight(500);
     en.start();
   }
 }

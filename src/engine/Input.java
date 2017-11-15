@@ -51,7 +51,6 @@ public class Input implements KeyListener, MouseListener, MouseMotionListener, M
   public void mouseWheelMoved(MouseWheelEvent e)
   {
     mouseWheelMove = e.getUnitsToScroll();
-    System.out.println(e.getUnitsToScroll());
   }
 
   @Override

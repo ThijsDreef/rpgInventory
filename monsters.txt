@@ -1,0 +1,71 @@
+evil monkey
+[5, 2, 2, 2, 2]
+i will tear of your head..
+1.0, 0.5, 0.5
+i will kill you with kindness
+0.5, 0.5, 0.8
+!
+charged at you with a bat
+0.7, 0.6, 0.5
+keeps staring at you
+0.8, 0.5, 0.5
+!
+end
+
+Dave
+[8, 4, 2, 2, 1]
+*corrects beanie*
+0.0, 0.0, 0.0
+*screams out in agony*
+0.0, 0.0, 0.0
+!
+hits you with that knowledge
+1.0, 1.0, 0
+corrects glasses
+0.0, 1.0, 0
+!
+end
+
+dragon
+[10, 2, 5, 2, 2]
+*sneezes fire*
+1.0, 0, 0
+you should not have come here *snorts*
+1.0, 0, 0
+!
+hits you with a fire breath *coughs*
+1.0, 0, 0
+swipes his tail at you *spank*
+1.0, 0, 0
+!
+end
+
+nino
+[10, 3, 4, 2, 3]
+put that shit on github
+1.0, 1.0, 1.0
+do it in a branch!
+1.0, 1.0, 1.0
+!
+use branches man..
+1.0, 1.0, 1.0
+when should it be finished?
+1.0, 1.0, 1.0
+its due tommorow!?!?
+1.0, 1.0, 1.0
+!
+end
+
+ghost
+[5, 3, 10, 2, 2]
+whoohooo
+1.0, 1.0, 1.0
+i will haunt you
+1.0, 1.0, 1.0
+!
+my slime will suffocate you
+1.0, 1.0, 1.0
+i will linger in your dreams
+1.0, 1.0, 1.0
+!
+end
